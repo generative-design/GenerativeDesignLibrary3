@@ -26,6 +26,10 @@
 
 package generativedesign;
  
+import processing.core.PApplet;
+import processing.core.PGraphics;
+import processing.core.PSurface;
+
 import jpen.event.*;
 import jpen.*;
 
@@ -56,9 +60,10 @@ public class Tablet implements PenListener {
 	 * the pen manager.
 	 * @param parent PApplet
 	 */
-	public Tablet(Component parent) {
+	public Tablet(PApplet parent) {
         this.parent = parent;
-		pm = new PenManager(parent);
+        
+		pm = new PenManager(parent.frame);
 		pm.pen.addListener(this);
 		savedPen = new PenStateCopy();
 		
@@ -376,7 +381,7 @@ public class Tablet implements PenListener {
 
     protected boolean isMovementEvent;
 	final protected PenStateCopy savedPen;
-    protected Component parent;
+    protected PApplet parent;
     protected PenManager pm;
     protected Method penButtonEventMethod;
     protected Method penKindEventMethod;
