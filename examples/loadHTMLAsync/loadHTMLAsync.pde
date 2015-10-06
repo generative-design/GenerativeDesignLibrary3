@@ -11,7 +11,7 @@ ArrayList myHTML;
 
 void setup() {
   // start loading
-  myHTML = GenerativeDesign.loadHTMLAsync(this, "http://de.wikipedia.org/wiki/Satz_von_Lagrange", GenerativeDesign.HTML_CONTENT);
+  myHTML = GenerativeDesign.loadHTMLAsync(this, "https://de.wikipedia.org/wiki/Satz_von_Lagrange", GenerativeDesign.HTML_CONTENT);
 }
 
 
@@ -26,7 +26,3 @@ void draw() {
     noLoop();
   }
 } 
-
-
-
-

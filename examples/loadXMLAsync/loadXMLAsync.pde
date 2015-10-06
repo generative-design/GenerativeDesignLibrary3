@@ -14,7 +14,7 @@ XML myXML;
 
 void setup() {
   // start loading
-  myXML = GenerativeDesign.loadXMLAsync2(this, "http://feeds.delicious.com/v2/rss/tag/generative?count=3");
+  myXML = GenerativeDesign.loadXMLAsync(this, "http://feeds.delicious.com/v2/rss/tag/generative?count=3");
 }
 
 
@@ -29,6 +29,3 @@ void draw() {
     noLoop();
   }
 } 
-
-
-
